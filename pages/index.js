@@ -34,7 +34,10 @@ export default function Home() {
       <>
         <div className={styles.container}>
 
-             <button onClick={disconnectWallet}>Disconnect</button>
+            {/* <button onClick={disconnectWallet}>Disconnect</button> */} 
+             <div className={styles.connect}>
+                  <ConnectWallet />
+              </div>
              
             <div className={styles.collectionContainer}>
                 {
