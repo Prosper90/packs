@@ -11,13 +11,13 @@ export default function Home() {
   const connectWithMetamask = useMetamask();
   const disconnectWallet = useDisconnect();
 
-  const { contract }  = useContract("0xA144177Ffa3337468574B14b7C137b7E29590297", "pack");
+  const { contract: pack }  = useContract("0xA144177Ffa3337468574B14b7C137b7E29590297", "pack");
 
 
- const {data: nfts, isLoading} = useOwnedNFTs(contract, address);
+ const {data: nfts, isLoading} = useOwnedNFTs(pack, address);
  const [openedpackrewards, setopenedpackrewards] = useState();
 
- console.log(contract, "checking pack data");
+ console.log(pack, "checking pack data");
  console.log(nfts, "nfts from pack");
 
  const open = async () => {
