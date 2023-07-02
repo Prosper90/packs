@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 export default function ERC1155RewardBox({reward}) {
 
     const edition = useEdition(reward.contractAddress);
-    const { data } = useNft(edition, reward.tokenId);
+    const { data } = useNFT (edition, reward.tokenId);
   return (
     <div className={styles.nftBox}>
        {data && (
